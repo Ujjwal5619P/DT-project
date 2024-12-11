@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Health Hub - Appointment Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #74ebd5, #9face6);
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 2em;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        input, select, textarea {
+            margin-bottom: 15px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+        .footer p {
+            margin: 0;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #007BFF;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book an Appointment</h1>
+        <form action="submit_appointment.php" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+            <label for="name">Library Id</label>
+            <input type="text" id="name" name="name" placeholder="Enter Library Id" required>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+            <label for="department">Department</label>
+            <select id="department" name="department" required>
+                <option value="">Select Department</option>
+                <option value="CSE Department">CSE Department</option>
+                <option value="ECE Department">ECE Department</option>
+                <option value="IT Department">IT Department</option>
+                <option value="School of Pharmacy">School of Pharmacy</option>
+            </select>
+
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+            <label for="slot">Preferred Slot</label>
+            <select id="slot" name="slot" required>
+                <option value="">Select Slot</option>
+                <option >Slot-1 (9 AM - 10 AM)</option>
+                <option >Slot-2 (11 AM - 12 AM)</option>
+                <option >Slot-3 (2 PM - 3 PM)</option>
+                <option >Slot-4 (3 PM - 4 PM)</option>
+                <option >Slot-5 (4 PM - 5 PM)</option>
+                <option >Slot-6 (5 PM - 7 PM)</option>
+
+
+            </select>
+
+            <label for="message">Additional Information</label>
+            <textarea id="message" name="message" rows="4" placeholder="Any additional information..."></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div class="footer">
+            <p>&copy; 2024 College Health Hub. All rights reserved.</p>
+        </div>
+    </div>
+    </body>
+</html>
